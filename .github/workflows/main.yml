@@ -17,13 +17,20 @@ jobs:
     runs-on: [runner_nathan_label]
 
     #name of this workflow
-    name: "build" 
+    name: "test" 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Run unite test
         run: flutter test
+      
+  build_ipa:
 
+    runs-on: [runner_nathan_label]
+
+    name: "build" 
+    steps:
       - name: Building the IPA
-        run: appollo build start
+        run: appollo build ls --all
+
