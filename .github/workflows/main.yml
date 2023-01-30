@@ -9,8 +9,7 @@ name : appollo ci
 
 # on: ['push']
 on:
-  push:
-    branches: [ "main" ]
+  workflow_dispatch:
     inputs:
       application_key:
         description: 'Enter de application key you want build'     
@@ -31,7 +30,7 @@ jobs:
 
       - name: Run unite test
         # run: flutter test
-        run: echo "${{ github.event.inputs.application_key }}"
+        run: echo "${{ github.event.inputs.environment }}"
       
   build_ipa:
 
@@ -40,6 +39,5 @@ jobs:
     name: "build" 
     steps:
       - name: Building the IPA
-        run: echo "${{ github.event.inputs.application_key }}"
-        # run: appollo build start --build-type=ad-hoc "${{github.event.inputs.application_key}}"
+        run: appollo build start --build-type=ad-hoc "${{github.event.inputs.application_key}}"
 
