@@ -11,14 +11,9 @@ name : appollo ci
 on:
   workflow_dispatch:
     inputs:
-      environment:
-        description: 'Define env name'     
+      application_key:
+        description: 'Enter de application key you want build'     
         required: true
-        default: 'prod'
-      branch:
-        description: 'Define branch name'     
-        required: true
-        default: 'master'
 
 jobs:
   #name of job
