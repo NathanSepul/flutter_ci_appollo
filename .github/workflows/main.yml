@@ -39,5 +39,5 @@ jobs:
     name: "build" 
     steps:
       - name: Building the IPA
-        run: appollo build start --build-type=ad-hoc "${{application_key}}"
+        run: appollo build start --build-type=ad-hoc "${{github.event.inputs.application_key}}"
 
