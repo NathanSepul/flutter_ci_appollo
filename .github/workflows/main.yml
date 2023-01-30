@@ -9,7 +9,8 @@ name : appollo ci
 
 # on: ['push']
 on:
-  workflow_dispatch:
+  push:
+    branches: [ "main" ]
     inputs:
       application_key:
         description: 'Enter de application key you want build'     
@@ -39,5 +40,5 @@ jobs:
     name: "build" 
     steps:
       - name: Building the IPA
-        run: appollo build start --build-type=ad-hoc "${{github.event.inputs.application_key}}"
+        # run: appollo build start --build-type=ad-hoc "${{github.event.inputs.application_key}}"
 
