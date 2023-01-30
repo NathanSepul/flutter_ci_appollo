@@ -32,6 +32,15 @@ jobs:
 
     name: "build" 
     steps:
+      - name: Connection
+        # run : appollo signin --email <email> --password <password>
+        run : echo "Connection step"
+
       - name: Building the IPA
         run: appollo build start --build-type=ad-hoc 882
+        # run: appollo build start --build-type=ad-hoc <application_key>
+
+      - name: Disconnection
+      #   run : appollo signout
+        run : echo "Disconnection step"
 
