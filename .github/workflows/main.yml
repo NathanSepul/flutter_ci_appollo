@@ -12,24 +12,22 @@ on: ['push']
 jobs:
   #name of job
   check_validity_flutter:
-
     # chose the runner (personal runner in this case)
     runs-on: [runner_nathan_label]
 
     #name of this workflow
-    name: "test" 
+    name: "Test phase" 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Run unite test
         run: flutter test
-      
+
+
   build_ipa:
-
     runs-on: [runner_nathan_label]
-
-    name: "build" 
+    name: "Build IPA file" 
     steps:
       - name: Connection
         run : echo "Connection step"
@@ -42,4 +40,13 @@ jobs:
       - name: Disconnection
         run : echo "Disconnection step"
         # run : appollo signout
+
+
+  deploy:
+    runs-on: [runner_nathan_label]
+    name: "Publish app" 
+    steps:
+      - name: Connection
+        if: github.ref == 'refs/heads/production'
+        run : echo "on publie"
 
