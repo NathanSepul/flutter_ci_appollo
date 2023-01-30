@@ -24,7 +24,7 @@ jobs:
 
       - name: Run unite test
         # run: flutter test
-        run: echo ${{ github.event.inputs.environment }}
+        run: echo "${{ github.event.inputs.environment }}"
       
   build_ipa:
 
