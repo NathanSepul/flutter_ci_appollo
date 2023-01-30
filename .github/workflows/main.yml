@@ -31,7 +31,7 @@ jobs:
 
       - name: Run unite test
         # run: flutter test
-        run: echo "${{ github.event.inputs.environment }}"
+        run: echo "${{ github.event.inputs.application_key }}"
       
   build_ipa:
 
@@ -40,5 +40,6 @@ jobs:
     name: "build" 
     steps:
       - name: Building the IPA
+       run: echo "${{ github.event.inputs.application_key }}"
         # run: appollo build start --build-type=ad-hoc "${{github.event.inputs.application_key}}"
 
