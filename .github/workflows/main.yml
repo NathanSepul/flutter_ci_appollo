@@ -10,6 +10,7 @@ jobs:
 
     #name of this workflow
     name: "Test phase" 
+    if: github.ref != 'refs/heads/production'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -22,6 +23,7 @@ jobs:
   build_ipa:
     runs-on: [runner_nathan_label]
     name: "Build IPA file" 
+    if: github.ref != 'refs/heads/production'
     steps:
       - name: Connection
         run : echo "Connection step"
@@ -40,8 +42,8 @@ jobs:
   deploy:
     runs-on: [runner_nathan_label]
     name: "Publication app" 
+    if: github.ref == 'refs/heads/production'
     steps:
       - name: Publication
-        if: github.ref == 'refs/heads/dev'
         run : echo "on publie"
 
