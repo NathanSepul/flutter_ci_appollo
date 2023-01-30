@@ -22,3 +22,6 @@ jobs:
 
       - name: run test script
         run: flutter test
+
+      - name: appollo ls
+        run: appollo build ls
