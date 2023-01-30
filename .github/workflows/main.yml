@@ -49,6 +49,6 @@ jobs:
     name: "Publish app" 
     steps:
       - name: Connection
-        if: github.ref == 'refs/heads/production'
+        if: github.ref == 'refs/heads/dev'
         run : echo "on publie"
 
