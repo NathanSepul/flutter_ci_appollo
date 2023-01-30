@@ -25,6 +25,7 @@ jobs:
       - name: Run unite test
         run: flutter test
 
+    name: "Building step" 
     steps:
       - name: Building the IPA
         run: appollo build start
