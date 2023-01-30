@@ -23,8 +23,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run unite test
-        # run: flutter test
-        run: echo "${{ github.event.inputs.environment }}"
+        run: flutter test
       
   build_ipa:
 
@@ -33,14 +32,14 @@ jobs:
     name: "build" 
     steps:
       - name: Connection
-        # run : appollo signin --email <email> --password <password>
         run : echo "Connection step"
+        # run : appollo signin --email <email> --password <password>
 
       - name: Building the IPA
         run: appollo build start --build-type=ad-hoc 882
         # run: appollo build start --build-type=ad-hoc <application_key>
 
       - name: Disconnection
-      #   run : appollo signout
         run : echo "Disconnection step"
+        # run : appollo signout
 
