@@ -1,12 +1,5 @@
 name : appollo ci
 
-#Controls when the workflow will run (merge on main and pull request on main)
-# on:
-#   push:
-#     branches: [ "main" ]
-#   pull_request:
-#     branches: [ "main" ]
-
 on: ['push']
 
 jobs:
@@ -46,9 +39,9 @@ jobs:
 
   deploy:
     runs-on: [runner_nathan_label]
-    name: "Publish app" 
+    name: "Publication app" 
     steps:
-      - name: Connection
+      - name: Publication
         if: github.ref == 'refs/heads/dev'
         run : echo "on publie"
 
