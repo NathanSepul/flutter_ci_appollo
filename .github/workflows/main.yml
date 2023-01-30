@@ -3,15 +3,12 @@ name : appollo ci
 on: ['push']
 
 jobs:
-  #name of job
   check_validity_flutter:
-    # chose the runner (personal runner in this case)
     runs-on: [runner_nathan_label]
-
-    #name of this workflow
     name: "Test phase" 
     if: github.ref != 'refs/heads/production'
     steps:
+      # extract repo
       - name: Checkout
         uses: actions/checkout@v3
 
@@ -21,6 +18,7 @@ jobs:
 
 
   build_ipa:
+    needs: check_validity_flutter
     runs-on: [runner_nathan_label]
     name: "Build IPA file" 
     if: github.ref != 'refs/heads/production'
@@ -46,4 +44,5 @@ jobs:
     steps:
       - name: Publication
         run : echo "on publie"
+        # run: appollo build start --build-type=publication <application_key>
 
