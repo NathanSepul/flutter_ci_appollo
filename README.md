@@ -31,7 +31,7 @@ Inside workflows you will create github_actions.yml file and insert your actions
 <br>  
 Exemple of workflow with Appollo
 
-```YAML ffffff
+```YAML 
 name : appollo ci
 
 on: ['push']
