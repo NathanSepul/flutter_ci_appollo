@@ -109,8 +109,6 @@ appollo app ls
 
 <h2>Usage</h2>
 
-Now that all is configured you doens't need to do anything else. 
-
-The previous worflow is call on each push no matter the branch because we specify *on: ['push']*.
-
-However the last job is cald only if there are a push on th branch *production*
+Now that all is configured you doens't need to do anything else.  
+The previous worflow is call on each push no matter the branch because we specify *on: ['push']*.  
+However the last job is cald only if there are a push on *production* branch
