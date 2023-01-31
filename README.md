@@ -8,7 +8,7 @@ This is an example project, with the objective the show how to use the Github Ac
 
 To Follow this tutorial you will need have installed some tools
 
--[X] [Appollo](https://github.com/Appollo-CLI/Appollo)
+- [X] [Appollo](https://github.com/Appollo-CLI/Appollo)
 
 <h2>Initial state</h2>
 
