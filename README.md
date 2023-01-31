@@ -31,7 +31,7 @@ mkdir -p .github/worklows/
 inside workflows you will create github_actions.yml file and insert your actions. 
 exemple of workflow with appollo
 
-```
+```YAML
 name : appollo ci
 
 on: ['push']
