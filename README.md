@@ -2,7 +2,7 @@
 
 This is an example project, with the objective the show how to use the Github Action with [Appollo](https://github.com/Appollo-CLI/Appollo "The easy way to setup, build & release flutter apps for iOS on Linux, Windows and MacOS").
 
-![The San Juan Mountains are beautiful!](/.images/workflow.jpg "San Juan Mountains")
+![workflow](/.images/workflow.jpg "workflow")
 
 <h2>Prerequisites</h2>
 
@@ -18,4 +18,4 @@ In this tutorial we will use the sel-hosted runner.
 
 <h3>Self-hosted runner</h3>
 
-To add a self-hosted runner to your repository you should go to settings's repository **=>** Actions **=>**  Runners  **=>** New self-hosted runner button and follow the tutorial for your os. 
+To add a self-hosted runner to your repository you should go to settings's repository **>** Actions **>**  Runners  **>** New self-hosted runner button and follow the tutorial for your os. 
