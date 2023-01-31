@@ -52,7 +52,7 @@ jobs:
 
   build_ipa:
     needs: check_validity_flutter
-    runs-on: [runner_nathan_label]
+    runs-on: [<personal_runner_label>]
     name: "Build IPA file" 
     steps:
       - name: Connection
@@ -76,7 +76,7 @@ jobs:
 
   deploy:
     needs: build_ipa
-    runs-on: [runner_nathan_label]
+    runs-on: [<personal_runner_label>]
     name: "Publication app" 
     if: github.ref == 'refs/heads/production'
     steps:
