@@ -115,6 +115,8 @@ However the last job is cald only if there are a push on *production* branch
 When you push your code on Github you can show the workflow executed or in execution in the section *Actions* of the repository
 ![Go to action](/.images/actions_bar.jpg "Go to action")
 
-If the unite tests have successfully passed and the build ipa success too you got te url to get the IPA, either to download it, or to install it if opened from an iOS device.
+If the unit tests has been successfully passed and the build ipa successed too you got te url to get the IPA, either to download it, or to install it if opened from an iOS device.
 
-And if the push was on *production* branch the workflow will publish your app on App Store
+Finally if the push was on *production* branch the workflow will publish your app on App Store.
+
+And that's it with this tutorial you learn how to use Appollo with Github Actions
