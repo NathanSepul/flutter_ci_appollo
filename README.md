@@ -96,7 +96,7 @@ jobs:
 ```
 
 In this exemple we have 4 parametres:
-- <personal_runner_label>
-- <email>
-- <password>
-- <password>
+- < personal_runner_label >
+- < email >
+- < password >
+- < password >
