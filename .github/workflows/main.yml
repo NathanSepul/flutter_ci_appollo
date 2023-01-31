@@ -6,7 +6,6 @@ jobs:
   check_validity_flutter:
     runs-on: [runner_nathan_label]
     name: "Test phase" 
-    if: github.ref != 'refs/heads/production'
     steps:
       # extract repo
       - name: Checkout
@@ -32,12 +31,19 @@ jobs:
         # run: appollo build start --build-type=ad-hoc 882
         # run: appollo build start --build-type=ad-hoc <application_key>
 
+
+      ##
+      ## Affichage de l'ipa
+      ##
+
+
       - name: Disconnection
         run : echo "Disconnection step"
         # run : appollo signout
 
 
   deploy:
+    needs: check_validity_flutter
     runs-on: [runner_nathan_label]
     name: "Publication app" 
     if: github.ref == 'refs/heads/production'
