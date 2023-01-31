@@ -25,12 +25,13 @@ To work properly you need to create these folder at the root of project
 ```
 mkdir -p .github/worklows/
 ```
-
+<br>
 Inside workflows you will create github_actions.yml file and insert your actions.
+
 <br>  
 Exemple of workflow with Appollo
 
-```YAML
+```YAML ffffff
 name : appollo ci
 
 on: ['push']
