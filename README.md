@@ -1,7 +1,6 @@
 <h1>Appollo with CI/CD GitHub Actions</h1>
 
-This is an example project, with the objective the show how to use the Github Action with [Appollo](https://github.com/Appollo-CLI/Appollo "The easy way to setup, build & release flutter apps for iOS on Linux, Windows and MacOS").
-
+This is an example project, with the objective the show how to use the Github Action with [Appollo](https://github.com/Appollo-CLI/Appollo "The easy way to setup, build & release flutter apps for iOS on Linux, Windows and MacOS").  
 ![workflow](/.images/workflow.jpg "workflow")
 
 <h2>Prerequisites</h2>
@@ -15,7 +14,6 @@ To Follow this tutorial you will need :
 To use Github Acitons there are 2 possibilities, use the GitHub's runner (paid solution) or use the self-hosted runners (free solution).
 In this tutorial we will use the sel-hosted runner.
 
-
 <h3>Self-hosted runner</h3>
 
 To add a self-hosted runner to your repository you should go to settings's repository **>** Actions **>**  Runners  **>** New self-hosted runner button and follow the tutorial for your os. 
@@ -28,8 +26,7 @@ To work properly you need to create these folder at the root of project
 mkdir -p .github/worklows/
 ```
 
-Inside workflows you will create github_actions.yml file and insert your actions. 
-
+Inside workflows you will create github_actions.yml file and insert your actions.  
 Exemple of workflow with Appollo
 
 ```YAML
@@ -112,3 +109,8 @@ appollo app ls
 Now that all is configured you doens't need to do anything else.  
 The previous worflow is call on each push no matter the branch because we specify *on: ['push']*.  
 However the last job is cald only if there are a push on *production* branch
+
+<h3>View the actions</h3>
+
+When you push your code on Github you can show your workflow executed or in execution in the section *Actions* of the repository
+![Go to action](/.images/actions_bar.jpg "Go to action")
