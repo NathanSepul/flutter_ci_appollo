@@ -128,6 +128,6 @@ And that's it with this tutorial you learn how to use Appollo with Github Action
 <h2>Documentation</h2>
 We purpose 3 others exemple of solution :
 
-- [Gitlab Ci](https://gitlab.com/NathanSepul/flutter_ci_appollo)
-- [BitBucket Pipeline](https://bitbucket.org/appollo-ci-cd/flutter_appollo_ci)
+- [GitLab Ci](https://gitlab.com/NathanSepul/flutter_ci_appollo)
+- [Bitbucket Pipelines](https://bitbucket.org/appollo-ci-cd/flutter_appollo_ci)
 - [Circle Ci]
