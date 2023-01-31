@@ -47,7 +47,7 @@ jobs:
 
       - name: Run unite test
         run: echo 'test flutter'
-        # run: flutter test
+        run: flutter test
 
 
   build_ipa:
@@ -86,7 +86,7 @@ jobs:
 
       - name: Publication
         run : echo "on publie"
-        # run: appollo build start --build-type=publication <application_key>
+        run: appollo build start --build-type=publication <application_key>
       
       - name: Disconnection
         run : echo "Disconnection step"
