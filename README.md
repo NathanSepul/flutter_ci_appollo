@@ -112,5 +112,7 @@ However the last job is cald only if there are a push on *production* branch
 
 <h3>View the actions</h3>
 
-When you push your code on Github you can show your workflow executed or in execution in the section *Actions* of the repository
+When you push your code on Github you can show the workflow executed or in execution in the section *Actions* of the repository
 ![Go to action](/.images/actions_bar.jpg "Go to action")
+
+The could have Some status : *Success*, *Failure*, *Cancelled* or in process
