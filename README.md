@@ -26,7 +26,8 @@ To work properly you need to create these folder at the root of project
 mkdir -p .github/worklows/
 ```
 
-Inside workflows you will create github_actions.yml file and insert your actions.  
+Inside workflows you will create github_actions.yml file and insert your actions.
+<br>  
 Exemple of workflow with Appollo
 
 ```YAML
@@ -99,6 +100,7 @@ In this exemple we have 4 parametres:
 - <*password*> is the password to connect to your account on appollo
 - <*application_key*> is the key off your application. 
 
+<br>
 If you forgot the application's key you can use this following command : 
 ```
 appollo app ls
@@ -119,4 +121,4 @@ If the unit tests has been successfully passed and the build ipa successed too y
 
 Finally if the push was on *production* branch the workflow will publish your app on App Store.
 
-And that's it with this tutorial you learn how to use Appollo with Github Actions
+And that's it with this tutorial you learn how to use Appollo with Github Actions.
