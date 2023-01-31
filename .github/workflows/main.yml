@@ -43,7 +43,7 @@ jobs:
 
 
   deploy:
-    needs: check_validity_flutter
+    needs: build_ipa
     runs-on: [runner_nathan_label]
     name: "Publication app" 
     if: github.ref == 'refs/heads/production'
