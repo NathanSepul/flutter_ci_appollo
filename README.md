@@ -88,7 +88,7 @@ jobs:
 
       - name: Publication
         run : echo "on publie"
-        run: appollo build start --build-type=publication <≈>
+        run: appollo build start --build-type=publication <application_key>
       
       - name: Disconnection
         run : echo "Disconnection step"
@@ -96,7 +96,12 @@ jobs:
 ```
 
 In this exemple we have 4 parametres:
-- < personal_runner_label >
-- < email >
-- < password >
-- < password >
+- < personal_runner_label > is the self-hosted runner label defined when it was created
+- < email> is the email to connect to your account on appollo
+- < password > is the password to connect to your account on appollo
+- < application_key > is the key off your application. 
+
+if you forgot the application's key you can use this command : 
+```
+appollo app ls
+```
