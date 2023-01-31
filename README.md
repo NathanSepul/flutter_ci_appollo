@@ -96,12 +96,12 @@ jobs:
 ```
 
 In this exemple we have 4 parametres:
-- < personal_runner_label > is the self-hosted runner label defined when it was created
-- < email> is the email to connect to your account on appollo
-- < password > is the password to connect to your account on appollo
-- < application_key > is the key off your application. 
+- *personal_runner_label* is the self-hosted runner label defined when it was created
+- *email* is the email to connect to your account on appollo
+- *password* is the password to connect to your account on appollo
+- <*application_key*> is the key off your application. 
 
-if you forgot the application's key you can use this command : 
+If you forgot the application's key you can use this following command : 
 ```
 appollo app ls
 ```
