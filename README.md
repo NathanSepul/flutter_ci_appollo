@@ -80,7 +80,7 @@ jobs:
     runs-on: [<personal_runner_label>]
     name: "Publication app" 
     
-    # used only if push on 'production' branch
+    # to use only if push on 'production' branch
     if: github.ref == 'refs/heads/production'
     steps:
       - name: Connection
@@ -102,10 +102,15 @@ In this exemple we have 4 parametres:
 - <*password*> is the password to connect to your account on appollo
 - <*application_key*> is the key off your application. 
 
-
 If you forgot the application's key you can use this following command : 
 ```
 appollo app ls
 ```
 
 <h2>Usage</h2>
+
+Now that all is configured you doens't need to do anything else. 
+
+The previous worflow is call on each push no matter the branch because there is just specified *on: ['push']*.
+
+However the last job is cald only if there are a push on th branch *production*
