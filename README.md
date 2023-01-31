@@ -16,3 +16,4 @@ To use Github Acitons there are 2 possibilities, use the GitHub's runner (paid s
 In this tutorial we will use the sel-hosted runner.
 
 <h3>Self-hosted runner<h3>
+To add a self-hosted runner to your repository you should go to settings's repository **=>** Actions **=>**  Runners  **=>** New self-hosted runner button and follow the tutorial for your os. 
