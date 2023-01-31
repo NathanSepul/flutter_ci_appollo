@@ -45,7 +45,7 @@ jobs:
     needs: build_ipa
     runs-on: [runner_nathan_label]
     name: "Publication app" 
-    if: github.ref == 'refs/heads/production'
+    # if: github.ref == 'refs/heads/production'
     steps:
       - name: Publication
         run : echo "on publie"
