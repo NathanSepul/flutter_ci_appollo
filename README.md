@@ -4,12 +4,11 @@ This is an example project, with the objective the show how to use the Github Ac
 
 ![The San Juan Mountains are beautiful!](/.images/workflow.jpg "San Juan Mountains")
 
-<h2>Prerequisites<h2>
+<h2>Prerequisites</h2>
 
 To Follow this tutorial you will need have installed some tools
-- [X] [Appollo](https://github.com/Appollo-CLI/Appollo)
+[X] [Appollo](https://github.com/Appollo-CLI/Appollo)
 
-
-<h2>Initial state<h2>
+<h2>Initial state</h2>
 
 You will need a 
