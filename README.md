@@ -78,6 +78,8 @@ jobs:
     needs: build_ipa
     runs-on: [<personal_runner_label>]
     name: "Publication app" 
+    
+    # used only if push on 'production' branch
     if: github.ref == 'refs/heads/production'
     steps:
       - name: Connection
@@ -86,11 +88,15 @@ jobs:
 
       - name: Publication
         run : echo "on publie"
-        run: appollo build start --build-type=publication <application_key>
+        run: appollo build start --build-type=publication <≈>
       
       - name: Disconnection
         run : echo "Disconnection step"
         run : appollo signout
-
-
 ```
+
+In this exemple we have 4 parametres:
+- <personal_runner_label>
+- <email>
+- <password>
+- <password>
