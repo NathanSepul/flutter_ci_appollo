@@ -6,10 +6,13 @@ This is an example project, with the objective the show how to use the Github Ac
 
 <h2>Prerequisites</h2>
 
-To Follow this tutorial you will need have installed some tools :
+To Follow this tutorial you will need :
 - [X] [Appollo](https://github.com/Appollo-CLI/Appollo)
-- [x] [Flutter](https://docs.flutter.dev/get-started/install)
+- [x] A project [Flutter](https://docs.flutter.dev/get-started/install) directly in root repository
 
-<h2>Initial state</h2>
+<h2>Configuration</h2>
 
-You will need a 
+To use Github Acitons there are 2 possibilities, use the GitHub's runner (paid solution) or use the self-hosted runners (free solution).
+In this tutorial we will use the sel-hosted runner.
+
+<h3>Self-hosted runner<h3>
