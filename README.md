@@ -9,7 +9,6 @@ This is an example project, with the objective the show how to use the Github Ac
 To Follow this tutorial you will need :
 - [X] [Appollo](https://github.com/Appollo-CLI/Appollo) configured on the futur runner machine
 - [x] A project [Flutter](https://docs.flutter.dev/get-started/install) directly in root repository
-- [x] 
 
 <h2>Configuration</h2>
 
@@ -29,8 +28,9 @@ To work properly you need to create these folder at the root of project
 mkdir -p .github/worklows/
 ```
 
-inside workflows you will create github_actions.yml file and insert your actions. 
-exemple of workflow with appollo
+Inside workflows you will create github_actions.yml file and insert your actions. 
+
+Exemple of workflow with Appollo
 
 ```YAML
 name : appollo ci
