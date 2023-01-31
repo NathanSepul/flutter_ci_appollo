@@ -22,8 +22,75 @@ To add a self-hosted runner to your repository you should go to settings's repos
 
 <h3>Creation of actions file</h3>
 
-To work c you need to create 
+To work properly you need to create these folder at the root of project 
 
 ```
-sss
+mkdir -p .github/worklows/
+```
+
+inside workflows you will create github_actions.yml file and insert your actions. 
+exemple of workflow with appollo
+
+```
+name : appollo ci
+
+on: ['push']
+
+jobs:
+  check_validity_flutter:
+    runs-on: [<personal_runner_label>]
+    name: "Test phase" 
+    steps:
+      # extract repo
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run unite test
+        run: echo 'test flutter'
+        # run: flutter test
+
+
+  build_ipa:
+    needs: check_validity_flutter
+    runs-on: [runner_nathan_label]
+    name: "Build IPA file" 
+    steps:
+      - name: Connection
+        run : echo "Connection step"
+        run : appollo signin --email <email> --password <password>
+
+      - name: Building the IPA
+        run: echo 'build ipa'
+        run: appollo build start --build-type=ad-hoc <application_key>
+
+
+      ##
+      ## Affichage de l'ipa
+      ##
+
+
+      - name: Disconnection
+        run : echo "Disconnection step"
+        run : appollo signout
+
+
+  deploy:
+    needs: build_ipa
+    runs-on: [runner_nathan_label]
+    name: "Publication app" 
+    if: github.ref == 'refs/heads/production'
+    steps:
+      - name: Connection
+        run : echo "Connection step"
+        run : appollo signin --email <email> --password <password>
+
+      - name: Publication
+        run : echo "on publie"
+        # run: appollo build start --build-type=publication <application_key>
+      
+      - name: Disconnection
+        run : echo "Disconnection step"
+        run : appollo signout
+
+
 ```
