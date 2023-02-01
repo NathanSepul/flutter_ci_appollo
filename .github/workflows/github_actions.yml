@@ -28,7 +28,7 @@ jobs:
 
       - name: Building the IPA
         run: echo 'build ipa'
-        # run: appollo build start --build-type=ad-hoc <application_key>
+        #run: appollo build start --build-type=ad-hoc <application_key>
 
       ##
       ## Affichage de l'ipa
@@ -51,7 +51,7 @@ jobs:
 
       - name: Publication
         run : echo "on publie"
-        # run: appollo build start --build-type=publication <application_key>
+        #run: appollo build start --build-type=publication <application_key>
       
       - name: Disconnection
         run : echo "Disconnection step"
