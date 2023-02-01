@@ -55,7 +55,7 @@ jobs:
         run : echo "on publie"
         # run: appollo build start --build-type=publication <application_key>
       
-       - name: Disconnection
-         run : echo "Disconnection step"
+      - name: Disconnection
+        run : echo "Disconnection step"
         # run : appollo signout
 
