@@ -56,6 +56,6 @@ jobs:
         # run: appollo build start --build-type=publication <application_key>
       
        - name: Disconnection
-        run : echo "Disconnection step"
+         run : echo "Disconnection step"
         # run : appollo signout
 
