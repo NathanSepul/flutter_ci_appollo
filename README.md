@@ -52,7 +52,8 @@ jobs:
   build_ipa:
     needs: check_validity_flutter
     runs-on: [<personal_runner_label>]
-    name: "Build IPA file" 
+    name: "Build IPA file"
+    if: github.ref != 'refs/heads/production'
     steps:
       - name: Connection
         run : appollo signin --email <email> --password <password>
@@ -105,7 +106,7 @@ appollo app ls
 
 Now that all is configured you doens't need to do anything else.  
 The previous worflow is call on each push no matter the branch because we specify *on: ['push']*.  
-However the last job is cald only if there are a push on *production* branch
+However the last job is call only if there are a push on *production* branch and the second job isn't call in this case.
 
 <h3>View the actions</h3>
 
