@@ -6,8 +6,8 @@ This is an example project, with the objective the show how to use the Github Ac
 <h2>Prerequisites</h2>
 
 To Follow this tutorial you will need :
-- [X] [Appollo](https://github.com/Appollo-CLI/Appollo) configured on the futur runner machine
-- [x] A project [Flutter](https://docs.flutter.dev/get-started/install) directly in root repository
+- [Appollo](https://github.com/Appollo-CLI/Appollo) configured on the futur runner machine
+- A project [Flutter](https://docs.flutter.dev/get-started/install) directly in root repository
 
 <h2>Configuration</h2>
 
