@@ -53,7 +53,7 @@ jobs:
 
       - name: Publication
         run : echo "on publie"
-        # run: appollo build start --build-type=publication <application_key>
+        run: appollo build start --build-type=publication <882>
       
       - name: Disconnection
         run : echo "Disconnection step"
