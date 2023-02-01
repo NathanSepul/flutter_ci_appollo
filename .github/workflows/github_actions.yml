@@ -21,7 +21,7 @@ jobs:
     runs-on: [runner_nathan_label]
     name: "Build IPA file"
     if: github.ref != 'refs/heads/production'
-    steps:
+      steps:
       - name: Connection
         run : echo "Connection step"
         # run : appollo signin --email <email> --password <password>
@@ -46,7 +46,7 @@ jobs:
     runs-on: [runner_nathan_label]
     name: "Publication app" 
     if: github.ref == 'refs/heads/production'
-    steps:
+      steps:
       - name: Connection
         run : echo "Connection step"
         # run : appollo signin --email <email> --password <password>
