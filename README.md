@@ -46,7 +46,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run unite test
-        run: echo 'test flutter'
         run: flutter test
 
 
@@ -56,11 +55,9 @@ jobs:
     name: "Build IPA file" 
     steps:
       - name: Connection
-        run : echo "Connection step"
         run : appollo signin --email <email> --password <password>
 
       - name: Building the IPA
-        run: echo 'build ipa'
         run: appollo build start --build-type=ad-hoc <application_key>
 
 
@@ -70,7 +67,6 @@ jobs:
 
 
       - name: Disconnection
-        run : echo "Disconnection step"
         run : appollo signout
 
 
@@ -83,15 +79,12 @@ jobs:
     if: github.ref == 'refs/heads/production'
     steps:
       - name: Connection
-        run : echo "Connection step"
         run : appollo signin --email <email> --password <password>
 
       - name: Publication
-        run : echo "on publie"
         run: appollo build start --build-type=publication <application_key>
       
       - name: Disconnection
-        run : echo "Disconnection step"
         run : appollo signout
 ```
 
