@@ -17,7 +17,7 @@ In this tutorial we will use the sel-hosted runner.
 
 <h3>Self-hosted runner</h3>
 
-To add a self-hosted runner to your repository you should go to settings's repository **>** Actions **>**  Runners  **>** New self-hosted runner button and follow the tutorial for your os. 
+To add a self-hosted runner to your repository you should go to repository's settings  **>** Actions **>**  Runners  **>** New self-hosted runner button and follow the tutorial for your os. 
 
 <h3>Creation of actions file</h3>
 
