@@ -62,12 +62,6 @@ jobs:
       - name: Building the IPA
         run: appollo build start --build-type=ad-hoc <application_key>
 
-
-      ##
-      ## Affichage de l'ipa
-      ##
-
-
       - name: Disconnection
         run : appollo signout
 

@@ -30,10 +30,6 @@ jobs:
         run: echo 'build ipa'
         #run: appollo build start --build-type=ad-hoc <application_key>
 
-      ##
-      ## Affichage de l'ipa
-      ##
-
       - name: Disconnection
         run : echo "Disconnection step"
         # run : appollo signout
