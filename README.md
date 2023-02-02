@@ -92,7 +92,7 @@ In this exemple we have 4 parametres:
 
 <br>
 
-:warning: **If you are using Gitlab's runners**: You should add a job to add appollo !
+:warning: **If you are using GitHub's runners**: You should add a job to add appollo !
 ```
 pip install appollo 
 ```
