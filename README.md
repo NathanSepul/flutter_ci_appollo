@@ -119,7 +119,7 @@ If the unit tests has been successfully passed and the build ipa successed too y
 
 Finally if the push was on *production* branch the workflow will publish your app on App Store.
 
-And that's it with this tutorial you learn how to use Appollo with Github Actions.
+And that's it with this tutorial you had learn how to use Appollo with Github Actions.
 
 <h2>Documentation</h2>
 We purpose 3 others exemple of solution :
