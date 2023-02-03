@@ -23,7 +23,8 @@ jobs:
     if: github.ref != 'refs/heads/production'
     steps:
       - name: Install Appollo
-        run: pip3 install -y Appollo
+        run : echo "Install step"
+        # run: pip3 install appollo
 
       - name: Connection
         run : echo "Connection step"
@@ -45,7 +46,8 @@ jobs:
     if: github.ref == 'refs/heads/production'
     steps:
       - name: Install Appollo
-        run: pip3 install -y Appollo
+        run : echo "Install step"
+        # run: pip3 install appollo
 
       - name: Connection
         run : echo "Connection step"

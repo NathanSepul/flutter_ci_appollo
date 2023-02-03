@@ -17,7 +17,7 @@ To use Github Actions there are 2 possibilities, use the GitHub's runner (paid s
 If you want use the free solution, you can add a self-hosted runner to your repository by going to repository's settings  **>** Actions **>**  Runners  **>** New self-hosted runner button and follow the tutorial for your os. 
 
 
-> **_NOTE:_** When using a GitHub runner, the only difference is to add a command to install appollo on the runner.
+> **_NOTE:_** When using a GitHub runner or self-hosted runner, The only difference is the way to call the runner.
 
 
 <h3>Creation of actions file</h3>
