@@ -22,6 +22,9 @@ jobs:
     name: "Build IPA file"
     if: github.ref != 'refs/heads/production'
     steps:
+      - name: Install Appollo
+        run: pip3 install -y Appollo
+
       - name: Connection
         run : echo "Connection step"
         # run : appollo signin --email <email> --password <password>
@@ -41,6 +44,9 @@ jobs:
     name: "Publication app" 
     if: github.ref == 'refs/heads/production'
     steps:
+      - name: Install Appollo
+        run: pip3 install -y Appollo
+
       - name: Connection
         run : echo "Connection step"
         # run : appollo signin --email <email> --password <password>

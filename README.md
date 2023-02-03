@@ -10,18 +10,15 @@ for releasing iOS apps with a CI solution.
 To Follow this tutorial you will need :
 - An appollo account linked to your Apple Developer Account. [Learn how to setup Appollo.](https://appollo.readthedocs.io/en/master/tutorial/2_configure_app_store_connect.html)
 - A [Flutter](https://docs.flutter.dev/get-started/install) project located at the root of your git repository.
-- If you use a self-hosted  runner, install Appollo on your local machine on which the runner will be working : `pip install appollo`.
 
 <h2>Configuration</h2>
 
 To use Github Actions there are 2 possibilities, use the GitHub's runner (paid solution) or use the self-hosted runners (free solution).
-In this tutorial we will use the self-hosted runner.
+If you want use the free solution, you can add a self-hosted runner to your repository by going to repository's settings  **>** Actions **>**  Runners  **>** New self-hosted runner button and follow the tutorial for your os. 
+
 
 > **_NOTE:_** When using a GitHub runner, the only difference is to add a command to install appollo on the runner.
 
-<h3>Self-hosted runner</h3>
-
-To add a self-hosted runner to your repository you should go to repository's settings  **>** Actions **>**  Runners  **>** New self-hosted runner button and follow the tutorial for your os. 
 
 <h3>Creation of actions file</h3>
 
@@ -58,6 +55,9 @@ jobs:
     name: "Build IPA file"
     if: github.ref != 'refs/heads/production'
     steps:
+      - name: Install Appollo
+        run: pip3 install -y Appollo
+
       - name: Connection
         run : appollo signin --email <email> --password <password>
 
@@ -76,6 +76,9 @@ jobs:
     # only do this if we pushed on 'production' branch
     if: github.ref == 'refs/heads/production'
     steps:
+      - name: Install Appollo
+        run: pip3 install -y Appollo
+        
       - name: Connection
         run : appollo signin --email <email> --password <password>
 
@@ -91,31 +94,6 @@ In this exemple we have 4 parameters:
 - <*email*> is the email to connect to your account on appollo
 - <*password*> is the password to connect to your account on appollo
 - <*application_key*> is the key off your application. 
-
-<br>
-
-:warning: **If you are using GitHub's runners** you should first add Appollo to the runner before e.g.:
-```
-  deploy:
-    needs: build_ipa
-    runs-on: [<personal_runner_label>]
-    name: "Publication app" 
-    
-    # only do this if we pushed on 'production' branch
-    if: github.ref == 'refs/heads/production'
-    steps:
-      - name: Install Appollo
-        run: pip3 install -y Appollo
-
-      - name: Connection
-        run: appollo signin --email <email> --password <password>
-
-      - name: Publication
-        run: appollo build start --build-type=publication <application_key>
-      
-      - name: Disconnection
-        run : appollo signout
-```
 
 <br>
 
