@@ -23,7 +23,8 @@ jobs:
     if: github.ref != 'refs/heads/production'
     steps:
       - name: Install Appollo
-        run : echo "Install step"
+        # run : echo "Install step"
+          run: source ~/Desktop/test/env/bin/activate
         # run: pip3 install appollo
 
       - name: Connection
@@ -35,7 +36,8 @@ jobs:
         run: appollo build start --build-type=ad-hoc 882
 
       - name: Disconnection
-        run : echo "Disconnection step"
+        # run : echo "Disconnection step"
+        run: deactivate
         # run : appollo signout
 
 
