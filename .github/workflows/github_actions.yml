@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Install Appollo
         # run : echo "Install step"
-          run: source ~/Desktop/test/env/bin/activate
+        run: source ~/Desktop/test/env/bin/activate
         # run: pip3 install appollo
 
       - name: Connection
