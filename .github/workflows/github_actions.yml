@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: Install Appollo
         run : echo "Install step"
-        # run: pip3 install appollo
+        # run: yes | pip3 install appollo
 
       - name: Connection
         run : echo "Connection step"
@@ -46,7 +46,7 @@ jobs:
     steps:
       - name: Install Appollo
         run : echo "Install step"
-        # run: pip3 install appollo
+        # run: yes | pip3 install appollo
 
       - name: Connection
         run : echo "Connection step"
