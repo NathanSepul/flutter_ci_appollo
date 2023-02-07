@@ -62,7 +62,7 @@ jobs:
         run : appollo signin --email <email> --password <password>
 
       - name: Building the IPA
-        run: appollo build start --build-type=ad-hoc <application_key>
+        run: yes | appollo build start --build-type=ad-hoc <application_key>
 
       - name: Disconnection
         run : appollo signout
@@ -77,7 +77,7 @@ jobs:
     if: github.ref == 'refs/heads/production'
     steps:
       - name: Install Appollo
-        run: pip3 install -y Appollo
+        run: yes | pip3 install -y Appollo
         
       - name: Connection
         run : appollo signin --email <email> --password <password>
