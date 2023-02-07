@@ -56,7 +56,7 @@ jobs:
     if: github.ref != 'refs/heads/production'
     steps:
       - name: Install Appollo
-        run: pip3 install -y Appollo
+        run: yes | pip3 install -y Appollo
 
       - name: Connection
         run : appollo signin --email <email> --password <password>
