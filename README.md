@@ -17,7 +17,7 @@ To use Github Actions there are 2 possibilities, use the GitHub's runner (paid s
 If you want use the free solution, you can add a self-hosted runner to your repository by going to repository's settings  **>** Actions **>**  Runners  **>** New self-hosted runner button and follow the tutorial for your os. 
 
 
-> **_NOTE:_** When using a GitHub runner or self-hosted runner, The only difference is the way to call the runner.
+> **_NOTE:_** When using a GitHub runner or self-hosted runner, The only difference is the way to call the runner if you use self-hosted runner can replace `ubuntu-latest`with `[<personal_runner_label>]` .
 
 
 <h3>Creation of actions file</h3>
@@ -38,7 +38,7 @@ on: ['push']
 
 jobs:
   check_validity_flutter:
-    runs-on: [<personal_runner_label>]
+    runs-on: ubuntu-latest
     name: "Run tests" 
     steps:
       # extract repo
@@ -51,7 +51,7 @@ jobs:
 
   build_ipa:
     needs: check_validity_flutter
-    runs-on: [<personal_runner_label>]
+    runs-on: ubuntu-latest
     name: "Build IPA file"
     if: github.ref != 'refs/heads/production'
     steps:
@@ -89,8 +89,7 @@ jobs:
         run : appollo signout
 ```
 
-In this exemple we have 4 parameters:
-- <*personal_runner_label*> is the self-hosted runner label defined when it was created
+In this exemple we have 3 parameters:
 - <*email*> is the email to connect to your account on appollo
 - <*password*> is the password to connect to your account on appollo
 - <*application_key*> is the key off your application. 
