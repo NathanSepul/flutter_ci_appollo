@@ -15,7 +15,7 @@ Prerequisites
 To Follow this tutorial you will need :
 
 * An appollo account linked to your Apple Developer Account. `Learn how to setup Appollo <https://appollo.readthedocs.io/en/master/tutorial/2_configure_app_store_connect.html>`_.
-* A `Flutter<https://docs.flutter.dev/get-started/install>`_ project located at the root of your git repository.
+* A `Flutter <https://docs.flutter.dev/get-started/install>`_ project located at the root of your git repository.
 
 -------------
 Configuration
