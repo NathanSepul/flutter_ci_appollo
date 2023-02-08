@@ -41,7 +41,7 @@ To work properly you need to create this folder at the root of your project
 Inside workflows you will create a github_actions.yml file. This is where we will add the actions.
 Here is an example :
 
-.. code-block:: yml
+.. code-block::
   name : appollo ci
 
   on: ['push']
