@@ -6,7 +6,7 @@ for releasing iOS apps with a CI solution.
 
 .. image:: /.images/workflow.jpg
     :align: center
-    :width: 100%
+    :width: 70%
 
 -------------
 Prerequisites
