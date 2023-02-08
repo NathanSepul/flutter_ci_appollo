@@ -15,7 +15,7 @@ Prerequisites
 To Follow this tutorial you will need :
 
 * An appollo account linked to your Apple Developer Account. `Learn how to setup Appollo <https://appollo.readthedocs.io/en/master/tutorial/2_configure_app_store_connect.html>`_.
-* A `Flutter<https://docs.flutter.dev/get-started/install>`_project located at the root of your git repository.
+* A `Flutter<https://docs.flutter.dev/get-started/install>`_ project located at the root of your git repository.
 
 -------------
 Configuration
@@ -25,7 +25,7 @@ To use Github Actions there are 2 possibilities, use the GitHub's runner (paid s
 If you want use the free solution, you can add a self-hosted runner to your repository by going to repository's settings  **>** Actions **>**  Runners  **>** New self-hosted runner button and follow the tutorial for your os. 
 
 
-> **_NOTE:_** When using a GitHub runner or self-hosted runner, The only difference is the way to call the runner.
+.. NOTE:: When using a GitHub runner or self-hosted runner, The only difference is the way to call the runner.
 
 
 <h3>Creation of actions file</h3>
