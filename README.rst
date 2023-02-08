@@ -1,20 +1,20 @@
 =================================
 Appollo with CI/CD GitHub Actions
 =================================
-This is an example project, with the objective to show how to use Github Actions with `Appollo <https://github.com/Appollo-CLI/Appoll>`_.
+This is an example project, with the objective to show how to use Github Actions with `Appollo <https://github.com/Appollo-CLI/Appollo>`_.
 for releasing iOS apps with a CI solution.  
 
 .. image:: /.images/workflow.jpg
-  :align: center
-  :width: 70%
+    :align: center
+    :width: 100%
 
 -------------
 Prerequisites
 -------------
 
 To Follow this tutorial you will need :
-- An appollo account linked to your Apple Developer Account. `Learn how to setup Appollo <https://appollo.readthedocs.io/en/master/tutorial/2_configure_app_store_connect.html>`_.
-- A `Flutter<https://docs.flutter.dev/get-started/install>`_project located at the root of your git repository.
+* An appollo account linked to your Apple Developer Account. `Learn how to setup Appollo <https://appollo.readthedocs.io/en/master/tutorial/2_configure_app_store_connect.html>`_.
+* A `Flutter<https://docs.flutter.dev/get-started/install>`_project located at the root of your git repository.
 
 -------------
 Configuration
