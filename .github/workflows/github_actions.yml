@@ -13,7 +13,7 @@ jobs:
 
       - name: Run unite test
         run: echo 'test flutter'
-        # run: flutter test
+        # run: flutter test 
 
 
   build_ipa:
@@ -24,20 +24,19 @@ jobs:
     steps:
       - name: Install Appollo
         run : echo "Install step"
-        # run: pip3 install appollo
+        # run: yes | pip3 install appollo
 
       - name: Connection
         run : echo "Connection step"
         # run : appollo signin --email <email> --password <password>
 
       - name: Building the IPA
-        run: echo 'build ipa'
-        #run: appollo build start --build-type=ad-hoc <application_key>
+        # run: echo 'build ipa'
+        run: /Users/nathansepul/Desktop/test/env/bin/appollo build start --build-type=ad-hoc 882
 
       - name: Disconnection
         run : echo "Disconnection step"
         # run : appollo signout
-
 
   deploy:
     needs: build_ipa
@@ -47,7 +46,7 @@ jobs:
     steps:
       - name: Install Appollo
         run : echo "Install step"
-        # run: pip3 install appollo
+        # run: yes | pip3 install appollo
 
       - name: Connection
         run : echo "Connection step"
