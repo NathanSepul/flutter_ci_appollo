@@ -38,12 +38,11 @@ To work properly you need to create this folder at the root of your project
 
     mkdir -p .github/worklows/
 
-
 Inside workflows you will create a github_actions.yml file. This is where we will add the actions.
 Here is an example :
 
 .. code-block:: yml
-  
+
     name : appollo ci
 
     on: ['push']
@@ -108,6 +107,7 @@ In this exemple we have 4 parameters:
 * <*application_key*> is the key off your application. 
 
 .. note:: 
+  
   If you forgot the application's Appollo key you can use this following command :  ``appollo app ls``
 
 -----
