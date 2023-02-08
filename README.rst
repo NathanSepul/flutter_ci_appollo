@@ -107,7 +107,6 @@ In this exemple we have 4 parameters:
 * <*application_key*> is the key off your application. 
 
 .. note:: 
-
     If you forgot the application's Appollo key you can use this following command :  ``appollo app ls``
 
 -----
