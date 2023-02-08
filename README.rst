@@ -43,6 +43,7 @@ Inside workflows you will create a github_actions.yml file. This is where we wil
 Here is an example :
 
 .. code-block:: yml
+  
     name : appollo ci
 
     on: ['push']
