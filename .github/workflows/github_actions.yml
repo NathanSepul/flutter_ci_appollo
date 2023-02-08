@@ -10,7 +10,7 @@ jobs:
       # extract repo
       - name: Checkout
         # run: echo 'test flutter'
-        uses: actions/checkout@v3
+        # uses: actions/checkout@v3
 
       - name: Run unite test
         run: echo 'test flutter'
