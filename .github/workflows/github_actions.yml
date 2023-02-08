@@ -32,7 +32,7 @@ jobs:
 
       - name: Building the IPA
         run: echo 'build ipa'
-        # run: appollo build start --build-type=ad-hoc 882
+        # run: appollo build start --build-type=ad-hoc <application_key>
 
       - name: Disconnection
         run : echo "Disconnection step"
