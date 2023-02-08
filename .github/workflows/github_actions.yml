@@ -9,7 +9,8 @@ jobs:
     steps:
       # extract repo
       - name: Checkout
-        uses: actions/checkout@v3
+        run: echo 'test flutter'
+        # uses: actions/checkout@v3
 
       - name: Run unite test
         run: echo 'test flutter'
@@ -31,8 +32,8 @@ jobs:
         # run : appollo signin --email <email> --password <password>
 
       - name: Building the IPA
-        # run: echo 'build ipa'
-        run: /Users/nathansepul/Desktop/test/env/bin/appollo build start --build-type=ad-hoc 882
+        run: echo 'build ipa'
+        # run: appollo build start --build-type=ad-hoc <application_key>
 
       - name: Disconnection
         run : echo "Disconnection step"
