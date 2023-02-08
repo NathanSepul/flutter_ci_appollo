@@ -26,7 +26,7 @@ If you want use the free solution, you can add a self-hosted runner to your repo
 
 
 .. note:: 
-  When using a GitHub runner or self-hosted runner, The only difference is the way to call the runner.
+    When using a GitHub runner or self-hosted runner, The only difference is the way to call the runner.
 
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Creation of actions file
@@ -107,8 +107,8 @@ In this exemple we have 4 parameters:
 * <*application_key*> is the key off your application. 
 
 .. note:: 
-  
-  If you forgot the application's Appollo key you can use this following command :  ``appollo app ls``
+
+    If you forgot the application's Appollo key you can use this following command :  ``appollo app ls``
 
 -----
 Usage
