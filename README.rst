@@ -28,8 +28,9 @@ If you want use the free solution, you can add a self-hosted runner to your repo
 .. note:: 
   When using a GitHub runner or self-hosted runner, The only difference is the way to call the runner.
 
-
-<h3>Creation of actions file</h3>
+^^^^^^^^^^^^^^^^^^^^^^^^
+Creation of actions file
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 To work properly you need to create this folder at the root of your project 
 
@@ -41,62 +42,62 @@ To work properly you need to create this folder at the root of your project
 Inside workflows you will create a github_actions.yml file. This is where we will add the actions.
 Here is an example :
 
-.. code-block::
-  name : appollo ci
+.. code-block:: yml
+    name : appollo ci
 
-  on: ['push']
+    on: ['push']
 
-  jobs:
-    check_validity_flutter:
-      runs-on: [<personal_runner_label>]
-      name: "Run tests" 
-      steps:
-        # extract repo
-        - name: Checkout
-          uses: actions/checkout@v3
+    jobs:
+      check_validity_flutter:
+        runs-on: [<personal_runner_label>]
+        name: "Run tests" 
+        steps:
+          # extract repo
+          - name: Checkout
+            uses: actions/checkout@v3
 
-        - name: Run unit test
-          run: flutter test
-
-
-    build_ipa:
-      needs: check_validity_flutter
-      runs-on: [<personal_runner_label>]
-      name: "Build IPA file"
-      if: github.ref != 'refs/heads/production'
-      steps:
-        - name: Install Appollo
-          run: pip3 install -y Appollo
-
-        - name: Connection
-          run : appollo signin --email <email> --password <password>
-
-        - name: Building the IPA
-          run: appollo build start --build-type=ad-hoc <application_key>
-
-        - name: Disconnection
-          run : appollo signout
+          - name: Run unit test
+            run: flutter test
 
 
-    deploy:
-      needs: build_ipa
-      runs-on: [<personal_runner_label>]
-      name: "Publication app" 
-      
-      # only do this if we pushed on 'production' branch
-      if: github.ref == 'refs/heads/production'
-      steps:
-        - name: Install Appollo
-          run: pip3 install -y Appollo
-          
-        - name: Connection
-          run : appollo signin --email <email> --password <password>
+      build_ipa:
+        needs: check_validity_flutter
+        runs-on: [<personal_runner_label>]
+        name: "Build IPA file"
+        if: github.ref != 'refs/heads/production'
+        steps:
+          - name: Install Appollo
+            run: pip3 install -y Appollo
 
-        - name: Publication
-          run: appollo build start --build-type=publication <application_key>
+          - name: Connection
+            run : appollo signin --email <email> --password <password>
+
+          - name: Building the IPA
+            run: appollo build start --build-type=ad-hoc <application_key>
+
+          - name: Disconnection
+            run : appollo signout
+
+
+      deploy:
+        needs: build_ipa
+        runs-on: [<personal_runner_label>]
+        name: "Publication app" 
         
-        - name: Disconnection
-          run : appollo signout
+        # only do this if we pushed on 'production' branch
+        if: github.ref == 'refs/heads/production'
+        steps:
+          - name: Install Appollo
+            run: pip3 install -y Appollo
+            
+          - name: Connection
+            run : appollo signin --email <email> --password <password>
+
+          - name: Publication
+            run: appollo build start --build-type=publication <application_key>
+          
+          - name: Disconnection
+            run : appollo signout
 
 In this exemple we have 4 parameters:
 
@@ -120,6 +121,7 @@ View the actions
 ^^^^^^^^^^^^^^^^
 
 When you push your code on Github you can show the workflow executed or in execution in the section *Actions* of the repository
+
 .. image:: /.images/actions_bar.jpg
     :align: center
 
@@ -134,6 +136,6 @@ Documentation
 -------------
 We propose 3 others examples of solution with other CI tools:
 
-* [GitLab Ci](https://gitlab.com/NathanSepul/flutter_ci_appollo)
-* [Bitbucket Pipelines](https://bitbucket.org/appollo-ci-cd/flutter_appollo_ci)
-* [Circle Ci](https://github.com/NathanSepul/flutter_appollo_circle_ci)
+* `GitLab Ci <https://gitlab.com/NathanSepul/flutter_ci_appollo>`_
+* `Bitbucket Pipelines <https://bitbucket.org/appollo-ci-cd/flutter_appollo_ci>`_
+* `Circle Ci <https://github.com/NathanSepul/flutter_appollo_circle_ci>`_
