@@ -1,8 +1,7 @@
 =================================
 Appollo with CI/CD GitHub Actions
 =================================
-This is an example project, with the objective to show how to use Github Actions with `Appollo <https://github.com/Appollo-CLI/Appollo>`_.
-for releasing iOS apps with a CI solution.  
+This is an example project, with the objective to show how to use Github Actions with `Appollo <https://github.com/Appollo-CLI/Appollo>`_ for releasing iOS apps with a CI solution.  
 
 .. image:: /.images/workflow.jpg
     :align: center
