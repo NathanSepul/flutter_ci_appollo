@@ -67,7 +67,7 @@ Here is an example :
         if: github.ref != 'refs/heads/production'
         steps:
           - name: Install Appollo
-            run: pip3 install -y Appollo
+            run: yes | pip3 install Appollo
 
           - name: Connection
             run : appollo signin --email <email> --password <password>
@@ -88,7 +88,7 @@ Here is an example :
         if: github.ref == 'refs/heads/production'
         steps:
           - name: Install Appollo
-            run: pip3 install -y Appollo
+            run: yes | pip3 install Appollo
             
           - name: Connection
             run : appollo signin --email <email> --password <password>
