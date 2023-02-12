@@ -7,6 +7,8 @@ This is an example project, with the objective to show how to use Github Actions
     :align: center
     :width: 70%
 
+|
+
 -------------
 Prerequisites
 -------------
@@ -48,25 +50,27 @@ Here is an example :
 
     jobs:
       check_validity_flutter:
-        runs-on: [<personal_runner_label>]
+        runs-on: ubuntu-latest
         name: "Run tests" 
         steps:
           # extract repo
           - name: Checkout
             uses: actions/checkout@v3
 
+          - name: Install flutter
+            run: sudo snap install flutter --classic
+
           - name: Run unit test
             run: flutter test
 
-
       build_ipa:
         needs: check_validity_flutter
-        runs-on: [<personal_runner_label>]
+        runs-on: ubuntu-latest
         name: "Build IPA file"
         if: github.ref != 'refs/heads/production'
         steps:
           - name: Install Appollo
-            run: yes | pip3 install Appollo
+            run: pip3 install --no-input appollo 
 
           - name: Connection
             run : appollo signin --email <email> --password <password>
@@ -77,17 +81,16 @@ Here is an example :
           - name: Disconnection
             run : appollo signout
 
-
       deploy:
         needs: build_ipa
-        runs-on: [<personal_runner_label>]
+        runs-on: ubuntu-latest
         name: "Publication app" 
         
         # only do this if we pushed on 'production' branch
         if: github.ref == 'refs/heads/production'
         steps:
           - name: Install Appollo
-            run: yes | pip3 install Appollo
+            run: pip3 install --no-input appollo 
             
           - name: Connection
             run : appollo signin --email <email> --password <password>
@@ -98,9 +101,8 @@ Here is an example :
           - name: Disconnection
             run : appollo signout
 
-In this exemple we have 4 parameters:
+In this exemple we have 3 parameters:
 
-* <*personal_runner_label*> is the self-hosted runner label defined when it was created
 * <*email*> is the email to connect to your account on appollo
 * <*password*> is the password to connect to your account on appollo
 * <*application_key*> is the key off your application. 
