@@ -27,7 +27,7 @@ If you want use the free solution, you can add a self-hosted runner to your repo
 
 
 .. note:: 
-    When using a GitHub runner or self-hosted runner, The only difference is the way to call the runner.
+    When using a GitHub runner or self-hosted runner, the only difference is the way to call the runner. You should replace ``ubuntu-latest`` by ``[personal_runner_label]``
 
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Creation of actions file
