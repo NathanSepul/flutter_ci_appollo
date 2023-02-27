@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - '**'
-    workflow_dispatch:  
+    workflow_run:  
       secrets:
         email:
           type: string
