@@ -37,7 +37,7 @@ jobs:
 
       - name: Building the IPA
         run: echo 'build ipa'
-        # run: appollo build start --build-type=ad-hoc <application_key>
+        # run: appollo build start --build-type=ad-hoc ${{ secrets.APPLICATION_KEY }}
 
       - name: Disconnection
         run : echo "Disconnection step"
@@ -59,7 +59,7 @@ jobs:
 
       - name: Publication
         run : echo "on publie"
-        #run: appollo build start --build-type=publication <application_key>
+        #run: appollo build start --build-type=publication ${{ secrets.APPLICATION_KEY }}
       
       - name: Disconnection
         run : echo "Disconnection step"

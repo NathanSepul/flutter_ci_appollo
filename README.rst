@@ -76,7 +76,7 @@ Here is an example :
             run : appollo signin --email ${{ secrets.EMAIL_APPOLLO }} --password  ${{ secrets.PASSWORD_APPOLLO }}
 
           - name: Building the IPA
-            run: appollo build start --build-type=ad-hoc <application_key>
+            run: appollo build start --build-type=ad-hoc ${{ secrets.APPLICATION_KEY }}
 
           - name: Disconnection
             run : appollo signout
@@ -93,19 +93,19 @@ Here is an example :
             run: pip3 install --no-input appollo 
             
           - name: Connection
-            run : appollo signin --email ${{ secrets.<EMAIL_APPOLLO> }} --password  ${{ secrets.<PASSWORD_APPOLLO> }}
+            run : appollo signin --email ${{ secrets.EMAIL_APPOLLO }} --password  ${{ secrets.PASSWORD_APPOLLO }}
 
           - name: Publication
-            run: appollo build start --build-type=publication <application_key>
+            run: appollo build start --build-type=publication ${{ secrets.APPLICATION_KEY }}
           
           - name: Disconnection
             run : appollo signout
 
 In this exemple we have 3 parameters:
 
-* <*EMAIL_APPOLLO*> is the email to connect to your account on appollo
-* <*PASSWORD_APPOLLO*> is the password to connect to your account on appollo
-* <*application_key*> is the key off your application. 
+* *EMAIL_APPOLLO* is the email to connect to your account on appollo
+* *PASSWORD_APPOLLO* is the password to connect to your account on appollo
+* *APPLICATION_KEY* is the key off your application. 
 
 .. note:: 
     If you forgot the application's Appollo key you can use this following command :  ``appollo app ls``
