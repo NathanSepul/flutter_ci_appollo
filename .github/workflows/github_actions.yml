@@ -33,7 +33,7 @@ jobs:
 
       - name: Connection
         # run : echo "Connection step"
-        run : appollo signin --email  ${{ secrets.EMAIL_APPOLLO }} --password  ${{ secrets.PWD }}
+        run : appollo signin --email  ${{ secrets.EMAIL_APPOLLO }} --password  ${{ secrets.PASSWORD_APPOLLO }}
 
       - name: Building the IPA
         run: echo 'build ipa'
