@@ -32,8 +32,8 @@ jobs:
         # run: yes | pip3 install appollo
 
       - name: Connection
-        run : echo "Connection step"
-        run : appollo signin --email  ${{ secrets.EMAIL }} --password  ${{ secrets.PWD }}
+        # run : echo "Connection step"
+        run : appollo signin --email  ${{ secrets.EMAIL_APPOLLO }} --password  ${{ secrets.PWD }}
 
       - name: Building the IPA
         run: echo 'build ipa'
