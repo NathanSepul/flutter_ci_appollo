@@ -1,15 +1,12 @@
 name : appollo ci
 
 on: 
-  push:
-    branches:
-      - '**'
-    workflow_call:  
-      secrets:
-        email:
-          type: string
-          required: true
-          description: 'email to connect to appollo'
+  workflow_dispatch:  
+    secrets:
+      email:
+        type: string
+        required: true
+        description: 'email to connect to appollo'
 
 
 
