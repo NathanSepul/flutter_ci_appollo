@@ -1,11 +1,11 @@
 name : appollo ci
 
 on: 
-  push :
-    workflow_dispatch:  
-      inputs:
-        type: string
-        required: true
+  # push :
+  workflow_dispatch:  
+    inputs:
+      type: string
+      required: true
 
 
 jobs:
