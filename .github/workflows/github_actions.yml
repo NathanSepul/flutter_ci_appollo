@@ -13,7 +13,7 @@ jobs:
     steps:
       # extract repo
       - name: Checkout
-        run: echo 'test flutter'  ${{ secrets.EMAIL }}
+        run: echo 'test flutter' 
         # uses: actions/checkout@v3
 
       - name: Run unite test
@@ -32,8 +32,8 @@ jobs:
         # run: yes | pip3 install appollo
 
       - name: Connection
-        # run : echo "Connection step"
-        run : appollo signin --email  ${{ secrets.EMAIL_APPOLLO }} --password  ${{ secrets.PASSWORD_APPOLLO }}
+        run : echo "Connection step"
+        # run : appollo signin --email  ${{ secrets.EMAIL_APPOLLO }} --password  ${{ secrets.PASSWORD_APPOLLO }}
 
       - name: Building the IPA
         run: echo 'build ipa'

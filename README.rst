@@ -73,7 +73,7 @@ Here is an example :
             run: pip3 install --no-input appollo 
 
           - name: Connection
-            run : appollo signin --email <email> --password <password>
+            run : appollo signin --email ${{ secrets.EMAIL_APPOLLO }} --password  ${{ secrets.PASSWORD_APPOLLO }}
 
           - name: Building the IPA
             run: appollo build start --build-type=ad-hoc <application_key>
@@ -93,7 +93,7 @@ Here is an example :
             run: pip3 install --no-input appollo 
             
           - name: Connection
-            run : appollo signin --email <email> --password <password>
+            run : appollo signin --email ${{ secrets.<EMAIL_APPOLLO> }} --password  ${{ secrets.<PASSWORD_APPOLLO> }}
 
           - name: Publication
             run: appollo build start --build-type=publication <application_key>
@@ -103,8 +103,8 @@ Here is an example :
 
 In this exemple we have 3 parameters:
 
-* <*email*> is the email to connect to your account on appollo
-* <*password*> is the password to connect to your account on appollo
+* <*EMAIL_APPOLLO*> is the email to connect to your account on appollo
+* <*PASSWORD_APPOLLO*> is the password to connect to your account on appollo
 * <*application_key*> is the key off your application. 
 
 .. note:: 
