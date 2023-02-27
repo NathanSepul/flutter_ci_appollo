@@ -1,7 +1,7 @@
 name : appollo ci
 
 on: 
-  # push :
+  [push] 
   workflow_dispatch:  
     inputs:
       type: string
