@@ -1,14 +1,9 @@
 name : appollo ci
 
 on: 
-  # [push] 
   push:
     branches:
-      - '*'
-  workflow_dispatch:  
-    inputs:
-      type: string
-      required: true
+      - '**'
 
 
 jobs:
