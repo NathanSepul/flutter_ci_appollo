@@ -4,10 +4,11 @@ on:
   push:
     branches:
       - '**'
-    workflow_dispatch:  
+    workflow_call:  
       inputs:
-        type: string
-        required: true
+        email:
+          type: string
+          required: true
 
 
 
