@@ -101,11 +101,15 @@ Here is an example :
           - name: Disconnection
             run : appollo signout
 
-In this exemple we have 3 parameters:
+In this exemple we have 3 variables:
 
 * *EMAIL_APPOLLO* is the email to connect to your account on appollo
 * *PASSWORD_APPOLLO* is the password to connect to your account on appollo
 * *APPLICATION_KEY* is the key off your application. 
+
+Here is the `documentation <https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository>`_ for secret variables on Github
+
+|
 
 .. note:: 
     If you forgot the application's Appollo key you can use this following command :  ``appollo app ls``
