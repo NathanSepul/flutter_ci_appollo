@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - '**'
+    workflow_dispatch:  
+      inputs:
+        type: string
+        required: true
+
 
 
 jobs:
