@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         env:
           SUPER_SECRET: ${{ secrets.email }}
-        run: echo 'test flutter' "$SUPER_SECRET"
+        run: echo 'test flutter d' "$SUPER_SECRET"
         # uses: actions/checkout@v3
 
       - name: Run unite test
