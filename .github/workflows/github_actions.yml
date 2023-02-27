@@ -13,9 +13,7 @@ jobs:
     steps:
       # extract repo
       - name: Checkout
-        env:
-          SUPER_SECRET: ${{ secrets.email }}
-        run: echo 'test flutter d' "$SUPER_SECRET"
+        run: echo 'test flutter' ${{ secrets.email }}
         # uses: actions/checkout@v3
 
       - name: Run unite test
