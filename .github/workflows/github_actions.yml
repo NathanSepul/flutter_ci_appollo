@@ -5,10 +5,11 @@ on:
     branches:
       - '**'
     workflow_call:  
-      inputs:
+      secrets:
         email:
           type: string
           required: true
+          description: 'email to connect to appollo'
 
 
 
