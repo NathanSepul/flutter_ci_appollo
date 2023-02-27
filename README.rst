@@ -107,7 +107,7 @@ In this exemple we have 3 variables:
 * *PASSWORD_APPOLLO* is the password to connect to your account on appollo
 * *APPLICATION_KEY* is the key off your application. 
 
-Here is the `documentation <https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository>`_ for secret on Github
+Here is the `documentation <https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository>`_ for variables on Github
 
 |
 
