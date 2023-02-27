@@ -37,8 +37,8 @@ jobs:
 
       - name: Building the IPA
         run: echo 'build ipa'
-        # run: appollo build start --build-type=ad-hoc <application_key>
-
+         # run : appollo signin --email  ${{ secrets.EMAIL_APPOLLO }} --password  ${{ secrets.PASSWORD_APPOLLO }}
+         
       - name: Disconnection
         run : echo "Disconnection step"
         # run : appollo signout
